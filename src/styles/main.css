@@ -1,0 +1,137 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #a1b2c3;
+}
+
+.container{
+    width: 50%;
+    background-color: #101010;
+    border-radius: 2rem;
+    padding: 1.5rem 1.25rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    position: relative;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+
+header h2{
+    font-size: 1.5rem;
+}
+
+.volume_slider input{
+    position: relative;
+    accent-color: whitesmoke;
+}
+
+.keys_check input{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 30px;
+    background-color: #4b4b4b;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.27s ease;
+}
+
+.keys_check input::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: rgb(200, 200, 200);
+    position: absolute;
+    border-radius: 20px;
+    left: 0.3rem;
+}
+
+.keys_check input:checked::before{
+    left: 2rem;
+    background-color: #fff;
+}
+
+header .collum{
+    display: flex;
+    align-items: center;
+}
+
+header .collum span{
+    font-weight: bold;
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.piano_keys{
+    display: flex;
+    list-style: none;
+}
+
+.piano_keys span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.piano_keys .keys{
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.white{
+    border: 2px solid #101010;
+    width: 70px;
+    height: 227px;
+    background: linear-gradient(#fff 95%, #ddd 5%);
+    color: black;
+}
+
+.white:active{
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom #fff 0%, #ddd 100%);
+}
+
+.black{
+    width: 40px;
+    height: 127px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+    background: linear-gradient(#272727 95%, #000 5%);
+    color: whitesmoke;
+    border: 2px solid #101010;
+}
+
+.black:active{
+    box-shadow: inset -2px 2px 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom #000 0%, #404040 100%);
+}
+
+a{
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 3rem;
+    position: fixed;
+    bottom: 0;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: white;
+}
