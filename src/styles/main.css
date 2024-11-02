@@ -72,9 +72,18 @@ header .collum span{
     font-size: 1rem;
 }
 
-.piano_keys{
+.piano_keys {
     display: flex;
     list-style: none;
+    justify-content: center; /* Centraliza os elementos do piano */
+    margin: 0 auto; /* Centraliza a lista dentro do contêiner */
+}
+
+.piano_keys .keys {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
 }
 
 .piano_keys span{
@@ -86,11 +95,9 @@ header .collum span{
     font-weight: 500;
 }
 
-.piano_keys .keys{
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-    text-transform: uppercase;
+
+.hide span{
+    display: none;
 }
 
 .white{
@@ -101,7 +108,7 @@ header .collum span{
     color: black;
 }
 
-.white:active{
+.white.active{
     box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.15);
     background: linear-gradient(to bottom #fff 0%, #ddd 100%);
 }
@@ -116,7 +123,7 @@ header .collum span{
     border: 2px solid #101010;
 }
 
-.black:active{
+.black.active{
     box-shadow: inset -2px 2px 10px rgba(255, 255, 255, 0.1);
     background: linear-gradient(to bottom #000 0%, #404040 100%);
 }
